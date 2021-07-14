@@ -11,3 +11,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.card{
+  width: 18rem;
+}
+
+.cruz{
+  margin-left: -40px;
+  z-index: 100;
+}
