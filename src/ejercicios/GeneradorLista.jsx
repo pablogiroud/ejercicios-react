@@ -1,14 +1,16 @@
-const InputTarea = () => {
-    let tareita = document.getElementById("addTarea");
-    tareita.addEventListener("keyup", function(event) {
-        if (event.keyCode === 13) {
-            document.querySelector('tareasAgregadas').innerHTML=`
-            <div className="col-sm-12">
-                <input type="text" className="form-control form-control-sm mb-2" id="colFormLabelSm" placeholder=${tareita}></input>
-            </div>
-            `
-        }
-    }
-)}
+import React from 'react'
 
-export default InputTarea;
+
+const GeneradorLista = () => {
+    let tareas = JSON.parse(localStorage.getItem("tareas")) || []
+    console.log(tareas)
+    return (
+        <ul className="list-unstyled">
+                {tareas.map(tarea=>{
+                    return <li className="form-control form-control-sm mb-2" key={tarea.tarea}>{tarea.tarea}</li>
+                })}
+        </ul>
+        )
+}
+
+export default GeneradorLista;
