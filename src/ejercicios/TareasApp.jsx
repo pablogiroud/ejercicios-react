@@ -37,7 +37,6 @@ const TareasApp = () => {
                 <div className="card-body">
                     <h2 className="card-title text-center">Bienvenido</h2>
                     <h6 className="card-subtitle text-center mb-3 text-muted">Ingresa tus tareas</h6>
-                    <button className="mb-2" onClick={clearList}>Limpiar lista</button>
                     <div>
                         <form id='agregarTarea' onSubmit={guardarTarea}>
                             <div className="form-group row">
@@ -52,11 +51,11 @@ const TareasApp = () => {
                             </div>
                         </form>
                     </div>
+                    <button className="mb-2" onClick={clearList}>Limpiar lista</button>
                 </div>
             </div>
         </div>
     )
 }
-
 
 export default TareasApp;
