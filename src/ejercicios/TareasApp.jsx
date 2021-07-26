@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 
 const TareasApp = () => {
-    //guardar info de tareas
     const [tareas, setTareas] = useState([])
     const [inputValue, setInputvalue] = useState('')
     
@@ -11,7 +10,6 @@ const TareasApp = () => {
 
     const guardarTarea=(e)=>{
         e.preventDefault()
-        //console.log(inputValue);
         if(inputValue.length>4){
             setTareas([
                 ...tareas,
@@ -20,15 +18,13 @@ const TareasApp = () => {
                 done: false,
                 }
             ])
-            var frm = document.getElementById('agregarTarea')
-            frm.reset()
+            setInputvalue("");
         }else{
             alert("La tarea debe contener mas de 4 caracteres")
         }
-        
     }
     const clearList =()=>{
-        setTareas(tareas===[]);
+        setTareas([]);
     }
 
     return (
@@ -45,7 +41,7 @@ const TareasApp = () => {
                                 </div>
                                 <ul className="col-sm-12">
                                     {tareas.map(tarea=>{
-                                        return <li className="form-control form-control-sm mb-2" key={tarea.done}>{tarea.tarea}</li>
+                                        return <li className="form-control form-control-sm mb-2" key={tarea.tarea}>{tarea.tarea}</li>
                                     })}
                                 </ul>
                             </div>
