@@ -1,3 +1,4 @@
+/*
 import React from 'react'
 
 
@@ -14,3 +15,5 @@ const GeneradorLista = () => {
 }
 
 export default GeneradorLista;
+
+*/
